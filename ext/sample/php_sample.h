@@ -1,13 +1,11 @@
-//
-// Created by YangLong on 12/01/2018.
-//
+// php_sample.h
 
 #ifndef PHP_SAMPLE_H
 /* Prevent double inclusion */
 #define PHP_SAMPLE_H
 
 /* Define Extension Properties */
-#define PHP_SAMPLE_EXTNAME    "sample"
+#define PHP_SAMPLE_EXTNAME   "sample"
 #define PHP_SAMPLE_EXTVER    "1.0"
 
 /* Import configure options
@@ -27,9 +25,10 @@ extern zend_module_entry sample_module_entry;
 #define phpext_sample_ptr &sample_module_entry
 
 #if (PHP_MAJOR_VERSION > 5) || (PHP_MAJOR_VERSION == 5 && \
-                          PHP_MINOR_VERSION > 0)
+        PHP_MINOR_VERSION > 0)
     ZEND_BEGIN_ARG_INFO_EX(php_sample_retref_arginfo, 0, 1, 0)
     ZEND_END_ARG_INFO ()
 #endif /* PHP >= 5.1.0 */
 
 #endif /* PHP_SAMPLE_H */
+
